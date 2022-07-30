@@ -2,7 +2,6 @@ package main;
 
 import java.awt.Graphics;
 import java.awt.Image;
-import java.util.Arrays;
 
 public class Element
 {
@@ -112,19 +111,18 @@ public class Element
 	
 	public void setValue(boolean val)
 	{
-		System.out.println(this.getName()+" "+value+" "+val);
 		this.value = val;
 		if(name.equals("INPUT") || name.equals("OUTPUT"))
 		{
 			String str = name.toLowerCase();
 			if(value)
 			{
-				System.out.println("on");
+				// System.out.println("on");
 				setImg(str+"_on.png");
 			}
 			else
 			{
-				System.out.println("off");
+				// System.out.println("off");
 				setImg(str+".png");
 			}
 		}
@@ -136,7 +134,7 @@ public class Element
 			return false;
 		
 		int count = 0;
-		System.out.println(Arrays.toString(inputTab));
+		// System.out.println(Arrays.toString(inputTab));
 		
 		if(getName().equals("OR"))
 		{

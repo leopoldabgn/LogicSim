@@ -59,8 +59,8 @@ public class Window extends JFrame
 	{
 
 		final URL url = Thread.currentThread().getContextClassLoader().getResource(pathAndFileName);
-		System.out.println(pathAndFileName);
-		System.out.println(url);
+		// System.out.println(pathAndFileName);
+		// System.out.println(url);
 		return Toolkit.getDefaultToolkit().getImage(url);
 	}
 

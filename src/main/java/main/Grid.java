@@ -133,7 +133,7 @@ public class Grid extends JPanel
 			
 			public void mouseWheelMoved(MouseWheelEvent e) {
                 	int oldSize = size, coeff = 3;
-                    System.out.println("Scale : "+size);
+                    // System.out.println("Scale : "+size);
                     
                     if (e.getWheelRotation() > 0) 
                     {
