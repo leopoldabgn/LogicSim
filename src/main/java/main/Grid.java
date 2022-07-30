@@ -70,7 +70,7 @@ public class Grid extends JPanel
 					
 					if(isEmpty(coord[0], coord[1], s))
 					{
-						elt.add(new Element(selectedElt.toUpperCase(), "resources/"+selectedElt+".png", 
+						elt.add(new Element(selectedElt.toUpperCase(), selectedElt+".png", 
 								coord[0], coord[1], s));
 					}
 					repaint();

@@ -4,8 +4,6 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.util.Arrays;
 
-import javax.swing.ImageIcon;
-
 public class Element
 {
 	private String name;
@@ -19,7 +17,7 @@ public class Element
 	{
 		this.name = name;
 		this.imgPath = imgPath;
-		this.img = (new ImageIcon(imgPath).getImage());
+		this.img = Window.getImage(imgPath);
 		this.gridX = gridX;
 		this.gridY = gridY;
 	}
@@ -28,7 +26,7 @@ public class Element
 	{
 		this.name = name;
 		this.imgPath = imgPath;
-		this.img = (new ImageIcon(imgPath).getImage());
+		this.img = Window.getImage(imgPath);
 		this.gridX = gridX;
 		this.gridY = gridY;
 		this.size = size;
@@ -38,7 +36,7 @@ public class Element
 	{
 		this.name = name;
 		this.imgPath = imgPath;
-		this.img = (new ImageIcon(imgPath).getImage());
+		this.img = Window.getImage(imgPath);
 		this.value = value;
 		this.gridX = gridX;
 		this.gridY = gridY;
@@ -99,7 +97,7 @@ public class Element
 	public void setImg(String imgPath)
 	{
 		this.imgPath = imgPath;
-		this.img = (new ImageIcon(imgPath).getImage());
+		this.img = Window.getImage(imgPath);
 	}
 	
 	public void inverseValue()
@@ -118,7 +116,7 @@ public class Element
 		this.value = val;
 		if(name.equals("INPUT") || name.equals("OUTPUT"))
 		{
-			String str = "resources/"+name.toLowerCase();
+			String str = name.toLowerCase();
 			if(value)
 			{
 				System.out.println("on");

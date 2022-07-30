@@ -10,14 +10,14 @@ public class Line extends Element
 	
 	public Line(int sens, int gridX, int gridY)
 	{
-		super("LINE", sens == 0 ?"resources/lineH.png":"resources/lineV.png", gridX, gridY);
+		super("LINE", sens == 0 ?"lineH.png":"lineV.png", gridX, gridY);
 		this.sens = sens;
 	}
 	
 	public Line(int sens, int gridX, int gridY, boolean value)
 	{
-		super("LINE", sens == 0 ? (value ? "resources/lineH_on.png" : "resources/lineH.png") : 
-								  (value ? "resources/lineV_on.png" : "resources/lineV.png"), gridX, gridY, value);
+		super("LINE", sens == 0 ? (value ? "lineH_on.png" : "lineH.png") : 
+								  (value ? "lineV_on.png" : "lineV.png"), gridX, gridY, value);
 		this.sens = sens;
 	}
 
@@ -57,20 +57,20 @@ public class Line extends Element
 	public void setSens(int sens)
 	{
 		this.sens = sens == 0 ? 0 : 1;
-		this.setImg(sens == 0 ? (getValue() ? "resources/lineH_on.png" : "resources/lineH.png") : 
-								(getValue() ? "resources/lineV_on.png" : "resources/lineV.png"));
+		this.setImg(sens == 0 ? (getValue() ? "lineH_on.png" : "lineH.png") : 
+								(getValue() ? "lineV_on.png" : "lineV.png"));
 	}
 
 	public void setVal(boolean val)
 	{
 		this.setValue(val);
-		this.setImg(sens == 0 ? (getValue() ? "resources/lineH_on.png" : "resources/lineH.png") : 
-			(getValue() ? "resources/lineV_on.png" : "resources/lineV.png"));
+		this.setImg(sens == 0 ? (getValue() ? "lineH_on.png" : "lineH.png") : 
+			(getValue() ? "lineV_on.png" : "lineV.png"));
 		for(int i=0;i<lines.size();i++)
 		{
 			lines.get(i).setValue(val);
-			lines.get(i).setImg(sens == 0 ? (lines.get(i).getValue() ? "resources/lineH_on.png" : "resources/lineH.png") : 
-								 (lines.get(i).getValue() ? "resources/lineV_on.png" : "resources/lineV.png"));
+			lines.get(i).setImg(sens == 0 ? (lines.get(i).getValue() ? "lineH_on.png" : "lineH.png") : 
+								 (lines.get(i).getValue() ? "lineV_on.png" : "lineV.png"));
 		}
 	}
 	

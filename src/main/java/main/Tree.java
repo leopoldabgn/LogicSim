@@ -36,7 +36,7 @@ public class Tree extends JTree implements TreeSelectionListener
 	private DefaultTreeCellRenderer getRenderer(String imgPath)
 	{
 		DefaultTreeCellRenderer cellRenderer = new  DefaultTreeCellRenderer();
-		cellRenderer.setLeafIcon(new ImageIcon(imgPath));
+		cellRenderer.setLeafIcon(new ImageIcon(Window.getImage(imgPath)));
 		
 		return cellRenderer;
 	}

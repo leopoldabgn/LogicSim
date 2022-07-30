@@ -3,6 +3,9 @@ package main;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Frame;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.net.URL;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -31,8 +34,8 @@ public class Window extends JFrame
 		
 		gates = setupGates();
 		
-		input = new Element("INPUT", "resources/input_icon.png", 0, 0);
-		output = new Element("OUPUT", "resources/output_icon.png", 0, 0);
+		input = new Element("INPUT", "input_icon.png", 0, 0);
+		output = new Element("OUPUT", "output_icon.png", 0, 0);
 		
 		treePan.setBackground(Color.WHITE);
 		
@@ -48,8 +51,17 @@ public class Window extends JFrame
 	
 	public Element[] setupGates()
 	{
-		return new Element[] { new Element( "OR", "resources/or_icon.png", 0, 0, 2),
-							   new Element("XOR", "resources/xor_icon.png", 0, 0, 2) };
+		return new Element[] { new Element( "OR", "or_icon.png", 0, 0, 2),
+							   new Element("XOR", "xor_icon.png", 0, 0, 2) };
 	}
 	
+	public static Image getImage(final String pathAndFileName)
+	{
+
+		final URL url = Thread.currentThread().getContextClassLoader().getResource(pathAndFileName);
+		System.out.println(pathAndFileName);
+		System.out.println(url);
+		return Toolkit.getDefaultToolkit().getImage(url);
+	}
+
 }
