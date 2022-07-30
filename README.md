@@ -1,3 +1,4 @@
+*Creation date : 12/2020*
 # LogicSim
 Digital Logic Circuit Simulator written in Java
 
